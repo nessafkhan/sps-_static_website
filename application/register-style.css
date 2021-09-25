@@ -31,7 +31,7 @@
   width: 100%;
   border: none;
   outline: none;
-  color: rgb(153, 151, 151);
+  color: grey;
 }
 .reg-page .btn {
   width: 100%;
@@ -68,4 +68,8 @@
 }
 .form-check-input{
   margin-left: 1rem;
+}
+.error{
+  margin-top: 10px;
+  color: red;
 }

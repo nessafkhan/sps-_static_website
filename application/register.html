@@ -30,17 +30,30 @@
         <div class="card shadow p-5">
           <div class="container form-title">
             <h3>REGISTRATION</h3>
-
             <form action="" id="registerForm">
               <div class="row">
                 <div class="col-lg-12 formControl">
-                  <input type="text" placeholder="Full Name" name="fullName" />
-                  <span class="message"></span>
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    name="applicantName"
+                    minlength="5"
+                    maxlength="20"
+                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+                  />
+
                   <hr />
                 </div>
 
                 <div class="col-lg-5 mr-auto formControl">
-                  <input type="text" placeholder="Place" name="place" />
+                  <input
+                    type="text"
+                    placeholder="Place"
+                    name="place"
+                    minlength="4"
+                    maxlength="10"
+                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+                  />
                   <hr />
                 </div>
 
@@ -67,6 +80,8 @@
                     type="number"
                     placeholder="Contact No"
                     name="contact"
+                    minlength="10"
+                    maxlength="10"
                   />
                   <hr />
                 </div>
@@ -75,30 +90,31 @@
                   <select
                     class="form-select"
                     aria-label="Default select example"
-                    name="empyement-status"
+                    name="employementStatus"
                   >
-                    <option disabled selected>Employment Status</option>
-                    <option value="Employed">Employed</option>
-                    <option value="Fresher">Fresher</option>
-                    <option value="Student">Student</option>
+                    <option value="">Employment Status</option>
+                    <option value="employed">Employed</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="student">Student</option>
                   </select>
                   <hr />
                 </div>
+
                 <div class="col-lg-6 formControl">
                   <select
                     class="form-select"
                     aria-label="Default select example"
-                    name="educational-qualification"
+                    name="educationalQualification"
                   >
-                    <option disabled selected>
+                    <option value="0" disabled="" selected="">
                       Eduacational Qualifiaction
                     </option>
-                    <option value="B.Tech">B.Tech</option>
-                    <option value="M.Tech">M.Tech</option>
+                    <option value="b.tech">B.Tech</option>
+                    <option value="m.tech">M.Tech</option>
                     <option value="BCA/MCA">BCA/MCA</option>
                     <option value="B.Sc/M.Sc">B.Sc/M.Sc</option>
-                    <option value="Diploma">Diploma</option>
-                    <option value="Other">Other</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="other">Other</option>
                   </select>
                   <hr />
                 </div>
@@ -106,7 +122,8 @@
                   <input
                     type="text"
                     placeholder="Name of College / Organisation"
-                    name="institution-name"
+                    name="institutionName"
+                    minlength="5  "
                   />
                   <hr />
                 </div>
@@ -115,7 +132,7 @@
                   <input
                     type="number"
                     placeholder="Year of Graduation"
-                    name="graduation-year"
+                    name="graduationYear"
                   />
                   <hr />
                 </div>
@@ -132,7 +149,7 @@
                 </div>
                 <div class="col-lg-12 formControl">
                   <textarea
-                    name="reason-sps"
+                    name="reasonSps"
                     id=""
                     cols="10"
                     rows="2"
@@ -154,17 +171,18 @@
                   <select
                     class="form-select"
                     aria-label="Default select example"
-                    name="empyement-status"
+                    name="source"
                   >
                     <option disabled selected>
-                      "From Where did you learn about SPS?
+                      From Where did you learn about SPS?
                     </option>
-                    <option value="CrossRoads Youtube Channel">CrossRoads Youtube Channel</option>
+                    <option value="CrossRoads Youtube Channel">
+                      CrossRoads Youtube Channel
+                    </option>
                     <option value="Youtube">Youtube</option>
                     <option value="Friends">Friends</option>
                     <option value="Facebook">Facebook</option>
                     <option value="Whatsapp Group">Whatsapp Group</option>
-
                   </select>
 
                   <hr />
@@ -172,7 +190,7 @@
                 <div class="col-lg-12 formControl">
                   <div>
                     <input
-                      name="check-box-agree"
+                      name="checkAgree"
                       class="form-check-input"
                       type="checkbox"
                       value=""
@@ -196,8 +214,35 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="mb-0 mt-5 text-center">
+              <a href="#" class="p-3"
+                ><img src="assets/icons8-facebook.svg" alt=""
+              /></a>
+              <a href="#" class="p-3"
+                ><img src="assets/icons8-twitter.svg" alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/crossroads.official/"
+                class="p-3"
+              >
+                <img src="assets/icons8-instagram.svg" alt=""
+              /></a>
+            </p>
+            <div class="copy-right-section mt-3">
+              <p class="text-center">
+                Copyright &copy Packapeer Academy Private Ltd 2021
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="resgister.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
