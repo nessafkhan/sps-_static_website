@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #00d2b5;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form-title h3 {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+.reg-page {
+  background-color: #fff;
+  height: 100vh;
+}
+.reg-page .card {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+.reg-form .col-lg-12,
+.reg-page .col-lg-5 {
+  margin-top: 50px;
+}
+
+.reg-page input,
+.reg-page textarea,
+.reg-page select {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: rgb(153, 151, 151);
+}
+.reg-page .btn {
+  width: 100%;
+  background-color: #00d2b5;
+  color: #fff;
+  padding: 10px;
+}
+.reg-page form .formControl.error {
+  border-bottom: 1px solid red;
+}
+
+.reg-page form .formControl.error span {
+  color: red;
+}
+
+.reg-page form .formControl.success {
+  border-bottom: 1px solid green;
+}
+
+.reg-page form .formControl.success span {
+  color: green;
+}
+.formControl{
+    margin-top: 2rem;
+}
+.agreement{
+    color: rgb(167, 166, 166);
+}
+.agreement span a{
+  color: var(--primary-color);
+}
+.agreement span a:hover{
+  text-decoration: none;
+}
+.form-check-input{
+  margin-left: 1rem;
+}
