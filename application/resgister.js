@@ -53,13 +53,6 @@ $("#registerForm").validate({
     },
   },
   
-  errorPlacement: function(error,element){
-    if(element.is(":checkbox")){
-        error.appendTo(element.parents(".agree"));
-    }else{
-         error.insertAfter( element );
-    }
-},
 
 submitHandler: function(form){
   $.ajax({
