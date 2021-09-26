@@ -11,6 +11,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="register-style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Register Form | SPS</title>
   </head>
   <body>
@@ -29,188 +32,192 @@
       <div class="container mt-5 mb-5 p-5">
         <div class="card shadow p-5">
           <div class="container form-title">
-            <h3>REGISTRATION</h3>
-            <form action="" id="registerForm">
-              <div class="row">
-                <div class="col-lg-12 formControl">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    name="applicantName"
-                    minlength="5"
-                    maxlength="20"
-                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
-                  />
-
-                  <hr />
-                </div>
-
-                <div class="col-lg-5 mr-auto formControl">
-                  <input
-                    type="text"
-                    placeholder="Place"
-                    name="place"
-                    minlength="4"
-                    maxlength="10"
-                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
-                  />
-                  <hr />
-                </div>
-
-                <div class="col-lg-5 ml-auto formControl">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    name="gender"
-                  >
-                    <option disabled selected>Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </select>
-                  <hr />
-                </div>
-
-                <div class="col-lg-12 formControl">
-                  <input type="email" placeholder="Email" name="email" />
-                  <hr />
-                </div>
-
-                <div class="col-lg-5 formControl">
-                  <input
-                    type="number"
-                    placeholder="Contact No"
-                    name="contact"
-                    minlength="10"
-                    maxlength="10"
-                  />
-                  <hr />
-                </div>
-
-                <div class="col-lg-5 ml-auto formControl">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    name="employementStatus"
-                  >
-                    <option value="">Employment Status</option>
-                    <option value="employed">Employed</option>
-                    <option value="fresher">Fresher</option>
-                    <option value="student">Student</option>
-                  </select>
-                  <hr />
-                </div>
-
-                <div class="col-lg-6 formControl">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    name="educationalQualification"
-                  >
-                    <option value="0" disabled="" selected="">
-                      Eduacational Qualifiaction
-                    </option>
-                    <option value="b.tech">B.Tech</option>
-                    <option value="m.tech">M.Tech</option>
-                    <option value="BCA/MCA">BCA/MCA</option>
-                    <option value="B.Sc/M.Sc">B.Sc/M.Sc</option>
-                    <option value="diploma">Diploma</option>
-                    <option value="other">Other</option>
-                  </select>
-                  <hr />
-                </div>
-                <div class="col-lg-12 formControl">
-                  <input
-                    type="text"
-                    placeholder="Name of College / Organisation"
-                    name="institutionName"
-                    minlength="5  "
-                  />
-                  <hr />
-                </div>
-
-                <div class="col-lg-5 mr-auto formControl">
-                  <input
-                    type="number"
-                    placeholder="Year of Graduation"
-                    name="graduationYear"
-                  />
-                  <hr />
-                </div>
-
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name="yourself"
-                    id=""
-                    cols="10"
-                    rows="2"
-                    placeholder="Tell us more about you"
-                  ></textarea>
-                  <hr />
-                </div>
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name="reasonSps"
-                    id=""
-                    cols="10"
-                    rows="2"
-                    placeholder="Why do you want to join SPS?"
-                  ></textarea>
-                  <hr />
-                </div>
-                <div class="col-lg-12 formControl">
-                  <textarea
-                    name="motivation"
-                    id=""
-                    cols="10"
-                    rows="2"
-                    placeholder="What motivates you to work hard every day? "
-                  ></textarea>
-                  <hr />
-                </div>
-                <div class="col-lg-12 formControl">
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                    name="source"
-                  >
-                    <option disabled selected>
-                      From Where did you learn about SPS?
-                    </option>
-                    <option value="CrossRoads Youtube Channel">
-                      CrossRoads Youtube Channel
-                    </option>
-                    <option value="Youtube">Youtube</option>
-                    <option value="Friends">Friends</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Whatsapp Group">Whatsapp Group</option>
-                  </select>
-
-                  <hr />
-                </div>
-                <div class="col-lg-12 formControl">
-                  <div>
+            <span id="form-msg" class="text-success col-lg-12 mt-3 p-3 font-weight-bold text-center">
+            </span>
+            <div class="form-section">
+              <h3>REGISTRATION</h3>
+              <form action="" id="registerForm">
+                <div class="row">
+                  <div class="col-lg-12 formControl">
                     <input
-                      name="checkAgree"
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="flexCheckDefault"
+                      type="text"
+                      placeholder="Full Name"
+                      name="applicantName"
+                      minlength="5"
+                      maxlength="20"
+                      onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
                     />
+
+                    <hr />
                   </div>
-                  <p class="agreement">
-                    I agree that I have read and understood all the
-                    <span>
-                      <a href="../index.html#faq">FAQs</a>
-                    </span>
-                  </p>
-                  <hr />
+
+                  <div class="col-lg-5 mr-auto formControl">
+                    <input
+                      type="text"
+                      placeholder="Place"
+                      name="place"
+                      minlength="4"
+                      maxlength="10"
+                      onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)"
+                    />
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-5 ml-auto formControl">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      name="gender"
+                    >
+                      <option disabled selected>Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-12 formControl">
+                    <input type="email" placeholder="Email" name="email" />
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-5 formControl">
+                    <input
+                      type="number"
+                      placeholder="Contact No"
+                      name="contact"
+                      minlength="10"
+                      maxlength="10"
+                    />
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-5 ml-auto formControl">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      name="employementStatus"
+                    >
+                      <option value="">Employment Status</option>
+                      <option value="employed">Employed</option>
+                      <option value="fresher">Fresher</option>
+                      <option value="student">Student</option>
+                    </select>
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-6 formControl">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      name="educationalQualification"
+                    >
+                      <option value="0" disabled="" selected="">
+                        Eduacational Qualifiaction
+                      </option>
+                      <option value="b.tech">B.Tech</option>
+                      <option value="m.tech">M.Tech</option>
+                      <option value="BCA/MCA">BCA/MCA</option>
+                      <option value="B.Sc/M.Sc">B.Sc/M.Sc</option>
+                      <option value="diploma">Diploma</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 formControl">
+                    <input
+                      type="text"
+                      placeholder="Name of College / Organisation"
+                      name="institutionName"
+                      minlength="5  "
+                    />
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-5 mr-auto formControl">
+                    <input
+                      type="number"
+                      placeholder="Year of Graduation"
+                      name="graduationYear"
+                    />
+                    <hr />
+                  </div>
+
+                  <div class="col-lg-12 formControl">
+                    <textarea
+                      name="yourself"
+                      id=""
+                      cols="10"
+                      rows="2"
+                      placeholder="Tell us more about you"
+                    ></textarea>
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 formControl">
+                    <textarea
+                      name="reasonSps"
+                      id=""
+                      cols="10"
+                      rows="2"
+                      placeholder="Why do you want to join SPS?"
+                    ></textarea>
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 formControl">
+                    <textarea
+                      name="motivation"
+                      id=""
+                      cols="10"
+                      rows="2"
+                      placeholder="What motivates you to work hard every day? "
+                    ></textarea>
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 formControl">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      name="source"
+                    >
+                      <option disabled selected>
+                        From Where did you learn about SPS?
+                      </option>
+                      <option value="CrossRoads Youtube Channel">
+                        CrossRoads Youtube Channel
+                      </option>
+                      <option value="Youtube">Youtube</option>
+                      <option value="Friends">Friends</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Whatsapp Group">Whatsapp Group</option>
+                    </select>
+
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 formControl">
+                    <div>
+                      <input
+                        name="checkAgree"
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                    </div>
+                    <p class="agreement">
+                      I agree that I have read and understood all the
+                      <span>
+                        <a href="../index.html#faq">FAQs</a>
+                      </span>
+                    </p>
+                    <hr />
+                  </div>
+                  <div class="col-lg-12 mt-5 formControl">
+                    <input class="btn mt-5" type="submit" value="REGISTER" />
+                    <hr />
+                  </div>
                 </div>
-                <div class="col-lg-12 mt-5 formControl">
-                  <input class="btn mt-5" type="submit" value="REGISTER" />
-                  <hr />
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -240,14 +247,35 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- <script>
+      $("#registerForm").submit((e)=>{
+          e.preventDefault();
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbxcHpaH37-TKqX4dDe7tI4-jZIMbuUoxYtPhWjauQj9M79PMiDv9GinzREK_Ub0xOCCHw/exec",
+              data:$("#registerForm").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
+  
+              }
+          })
+      })
+  </script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="resgister.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script
+src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
       integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"

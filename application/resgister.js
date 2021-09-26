@@ -60,5 +60,23 @@ $("#registerForm").validate({
          error.insertAfter( element );
     }
 },
+
+submitHandler: function(form){
+  $.ajax({
+    url:"https://script.google.com/macros/s/AKfycbxcHpaH37-TKqX4dDe7tI4-jZIMbuUoxYtPhWjauQj9M79PMiDv9GinzREK_Ub0xOCCHw/exec",
+    data:$("#registerForm").serialize(),
+    method:"post",
+    success:function (response){
+        $(".form-section").hide();
+        $("#form-msg").html("Registration Completed Successfully")
+        
+        //window.location.href="https://google.com"
+    },
+    error:function (err){
+        alert("Something Error")
+
+    }
+})
+}
 });
 
