@@ -20,6 +20,17 @@
   </head>
   <body>
     <div class="container site-wrap">
+      <!-- Back to top button -->
+      <button
+        type="button"
+        class="btn btn-floating btn-lg"
+        id="btn-back-to-top"
+      >
+        <span class="material-icons"> keyboard_arrow_up </span>
+      </button>
+
+      <!-- Explanation -->
+
       <!-- Header section -->
       <div class="container">
         <div class="row">
@@ -56,12 +67,12 @@
             >
               <img
                 src="assets/whats_sps.png"
-                class="img-fluid mb-5"
+                class="img-fluid mb-4"
                 style="cursor: pointer"
               />
             </div>
             <div style="display: none">
-              <div class="embed-responsive embed-responsive-16by9 mb-5">
+              <div class="embed-responsive embed-responsive-16by9 mb-4">
                 <iframe
                   id="vid1"
                   class="embed-responsive-item"
@@ -71,6 +82,7 @@
                 ></iframe>
               </div>
             </div>
+        
 
             <!-- <div class="container-fluid mt-4"> -->
             <!-- <video
@@ -667,14 +679,25 @@
               alt=""
               class="img-fluid mt-5 mb-5"
             /> -->
-            <div id="vidbt3" onclick="this.nextElementSibling.style.display='block'; this.style.display='none';onPlayer3click()">
-              <img src="assets/whocanjoinsps.png" class="img-fluid mt-5 mb-5 " style="cursor:pointer;" />
+            <div
+              id="vidbt3"
+              onclick="this.nextElementSibling.style.display='block'; this.style.display='none';onPlayer3click()"
+            >
+              <img
+                src="assets/whocanjoinsps.png"
+                class="img-fluid mt-5 mb-5"
+                style="cursor: pointer"
+              />
             </div>
-            <div style="display:none">
+            <div style="display: none">
               <div class="embed-responsive embed-responsive-16by9 mt-5 mb-5">
-                <iframe id="vid3" class="embed-responsive-item" src="https://www.youtube.com/embed/xkmM6h32lnM?enablejsapi=1"
+                <iframe
+                  id="vid3"
+                  class="embed-responsive-item"
+                  src="https://www.youtube.com/embed/xkmM6h32lnM?enablejsapi=1"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -870,6 +893,31 @@
     <script src="videojs.hls.min.js"></script> -->
     <!-- <script src="../examples/jquery.js"></script>
     <script src="../examples/mediaelement-and-player.min.js"></script> -->
-    <script src="/JS/playVideo.js"></script>
+    <!-- <script src="JS/back_to_top.js"></script> -->
+    <script>function toggleClock() {
+      // get the clock
+      var myClock = document.getElementById('clock');
+  
+      // get the current value of the clock's display property
+      var displaySetting = myClock.style.display;
+  
+      // also get the clock button, so we can change what it says
+      var clockButton = document.getElementById('clockButton');
+  
+      // now toggle the clock and the button text, depending on current state
+      if (displaySetting == 'block') {
+        // clock is visible. hide it
+        myClock.style.display = 'none';
+        // change button text
+        clockButton.innerHTML = 'Show clock';
+      }
+      else {
+        // clock is hidden. show it
+        myClock.style.display = 'block';
+        // change button text
+        clockButton.innerHTML = 'Hide clock';
+      }
+    }
+    </script>
   </body>
 </html>
