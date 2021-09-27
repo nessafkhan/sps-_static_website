@@ -20,17 +20,6 @@
   </head>
   <body>
     <div class="container site-wrap">
-      <!-- Back to top button -->
-      <button
-        type="button"
-        class="btn btn-floating btn-lg"
-        id="btn-back-to-top"
-      >
-        <span class="material-icons"> keyboard_arrow_up </span>
-      </button>
-
-      <!-- Explanation -->
-
       <!-- Header section -->
       <div class="container">
         <div class="row">
@@ -82,7 +71,6 @@
                 ></iframe>
               </div>
             </div>
-        
 
             <!-- <div class="container-fluid mt-4"> -->
             <!-- <video
@@ -868,7 +856,10 @@
         </div>
       </footer>
     </div>
-
+    <!-- Back to top button -->
+    <button type="button" class="btn btn-floating btn-lg" id="btn-back-to-top">
+      <span class="material-icons"> keyboard_arrow_up </span>
+    </button>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -893,31 +884,6 @@
     <script src="videojs.hls.min.js"></script> -->
     <!-- <script src="../examples/jquery.js"></script>
     <script src="../examples/mediaelement-and-player.min.js"></script> -->
-    <!-- <script src="JS/back_to_top.js"></script> -->
-    <script>function toggleClock() {
-      // get the clock
-      var myClock = document.getElementById('clock');
-  
-      // get the current value of the clock's display property
-      var displaySetting = myClock.style.display;
-  
-      // also get the clock button, so we can change what it says
-      var clockButton = document.getElementById('clockButton');
-  
-      // now toggle the clock and the button text, depending on current state
-      if (displaySetting == 'block') {
-        // clock is visible. hide it
-        myClock.style.display = 'none';
-        // change button text
-        clockButton.innerHTML = 'Show clock';
-      }
-      else {
-        // clock is hidden. show it
-        myClock.style.display = 'block';
-        // change button text
-        clockButton.innerHTML = 'Hide clock';
-      }
-    }
-    </script>
+    <script src="JS/back_to_top.js"></script>
   </body>
 </html>
